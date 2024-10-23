@@ -17,6 +17,14 @@ $loggedIn = isset($_SESSION['idusuario']);
             right: 10px;
             font-size: 14px;
         }
+        
+        .admin-panel {
+            background-color: #f8f9fa;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            text-align: right;
+        }
     </style>
 </head>
 <body>
@@ -40,7 +48,15 @@ $loggedIn = isset($_SESSION['idusuario']);
         <a href="componentes.php">Componentes</a>
         <a href="contactos.php">Contactos</a>
     </nav>
+
     <main>
+        <!-- Nueva sección para administradores -->
+        <?php if (isset($_SESSION['rol']) && $_SESSION['rol'] == 'admin'): ?>
+            <div class="admin-panel">
+                <a href="agregar_producto.php" class="button">Agregar Producto</a>
+            </div>
+        <?php endif; ?>
+
         <h2 class="catalog-title">Productos Destacados</h2>
         <div class="catalog">
             <div class="product">
@@ -108,8 +124,6 @@ $loggedIn = isset($_SESSION['idusuario']);
             showSection('catalogo');
         });
 
-        // Puedes agregar más manejadores de eventos para los otros enlaces si es necesario
-
         function showSection(sectionId) {
             document.querySelectorAll('.section').forEach(function(section) {
                 section.style.display = 'none';
@@ -117,7 +131,6 @@ $loggedIn = isset($_SESSION['idusuario']);
             document.getElementById(sectionId).style.display = 'block';
         }
 
-        // Mostrar la sección de inicio por defecto
         showSection('inicio');
     </script>
 

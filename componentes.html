@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Componentes - PC Masters</title>
     <link rel="stylesheet" href="componentes.css">
-    <script src="scripts.js" defer></script>
+    <script src="Filtos_Componentes.js " defer></script>
     <script src="carrito.js"></script>
 </head>
 <body>
@@ -18,62 +18,74 @@
         </div>
     </header>
 
-<nav>
-    <a href="index.html">Inicio</a>
-    <a href="carrito.html">Carrito</a>
-    <a href="computadores.html">Computadores</a>
-    <a href="componentes.html" class="active">Componentes</a>
-    <a href="contactos.html">Contactos</a>
-</nav>
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="carrito.html">Carrito</a>
+        <a href="computadores.html">Computadores</a>
+        <a href="componentes.html" class="active">Componentes</a>
+        <a href="contactos.html">Contactos</a>
+    </nav>
 
-<main>
-    <section class="section">
-        <h2>Catálogo de Componentes</h2>
-        <div class="catalog">
-                <div class="product">
-                    <h2>Chasis Auros </h2>
+    <main>
+        <section class="section">
+            <h2>Catálogo de Componentes</h2>
+
+            <!-- Filtros -->
+            <div class="filters">
+                <label for="price-filter">Ordenar por precio:</label>
+                <select id="price-filter" onchange="ordenarProductos()">
+                    <option value="">Seleccione...</option>
+                    <option value="asc">Menor a Mayor</option>
+                    <option value="desc">Mayor a Menor</option>
+                </select>
+            </div>
+
+            <div class="catalog" id="product-catalog">
+                <div class="product" data-price="350000">
+                    <h2>Chasis Auros</h2>
                     <img src="Componentes-images/Chasis.png" alt="Componente 1">
                     <p>Chasis Auros.</p>
                     <p>$350.000 COP</p>
                     <button onclick="agregarAlCarrito({idproductos: 7, nombre: 'Chasis Auros', precio: 350000})" class="button">Agregar al Carrito</button>
-                    </div>
-                <div class="product">
+                </div>
+                <div class="product" data-price="500000">
                     <h2>Geforce GTX 1050 Ti</h2>
                     <img src="Componentes-images/Grafica1.png" alt="Componente 2">
-                    <p>Tarjeta grafica GTX 1050 Ti 4 GB VRAM.</p>
+                    <p>Tarjeta gráfica GTX 1050 Ti 4 GB VRAM.</p>
                     <p>$500.000 COP</p>
                     <button onclick="agregarAlCarrito({idproductos: 8, nombre: 'Geforce GTX 1050 Ti', precio: 500000})" class="button">Agregar al Carrito</button>
                 </div>
-                <div class="product">
+                <div class="product" data-price="279000">
                     <h2>Procesador I5</h2>
                     <img src="Componentes-images/i5.png" alt="Componente 3">
-                    <p>Procesador intel i5 8th Gen.</p>
+                    <p>Procesador Intel i5 8th Gen.</p>
                     <p>$279.000 COP</p>
                     <button onclick="agregarAlCarrito({idproductos: 9, nombre: 'Procesador I5', precio: 279000})" class="button">Agregar al Carrito</button>
                 </div>
-                <div class="product">
+                <div class="product" data-price="599900">
                     <h2>Procesador I7</h2>
                     <img src="Componentes-images/I7.png" alt="Componente 4">
-                    <p>Procesador intel i7 8th Gen.</p>
+                    <p>Procesador Intel i7 8th Gen.</p>
                     <p>$599.900 COP</p>
                     <button onclick="agregarAlCarrito({idproductos: 10, nombre: 'Procesador I7', precio: 599900})" class="button">Agregar al Carrito</button>
                 </div>
-                <div class="product">
-                    <h2>Sistema de refrigeracion</h2>
+                <div class="product" data-price="160900">
+                    <h2>Sistema de refrigeración</h2>
                     <img src="Componentes-images/refrigeracion.png" alt="Componente 5">
-                    <p>Sistema de refrigeracion por aire</p>
+                    <p>Sistema de refrigeración por aire</p>
                     <p>$160.900 COP</p>
                     <button onclick="agregarAlCarrito({idproductos: 11, nombre: 'Sistema de refrigeracion', precio: 160900})" class="button">Agregar al Carrito</button>
                 </div>
-                <div class="product">
+                <div class="product" data-price="860900">
                     <h2>Fuente de poder</h2>
                     <img src="Componentes-images/Fuente de poder.png" alt="Componente 6">
                     <p>Fuente de poder AX 1200i, 1200.</p>
                     <p>$860.900 COP</p>
-                    <button onclick="agregarAlCarrito({idproductos: 12, nombre: 'Funete de poder', precio: 860900})" class="button">Agregar al Carrito</button>
+                    <button onclick="agregarAlCarrito({idproductos: 12, nombre: 'Fuente de poder', precio: 860900})" class="button">Agregar al Carrito</button>
                 </div>
             </div>
         </section>
     </main>
+
 </body>
 </html>

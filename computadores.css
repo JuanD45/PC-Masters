@@ -103,3 +103,36 @@ nav a:hover {
 .product .button:hover {
     background-color: #e65c00;
 }
+
+/* Estilos para la sección de filtro */
+.filter-section {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.filter-section label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 10px;
+    color: #333;
+}
+
+.filter-section select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+    transition: border-color 0.3s;
+}
+
+.filter-section select:hover {
+    border-color: #ff6600;
+}
+
+.filter-section select:focus {
+    outline: none;
+    border-color: #ff6600;
+    box-shadow: 0 0 5px rgba(255, 102, 0, 0.5);
+}

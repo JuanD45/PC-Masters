@@ -1,4 +1,5 @@
 <?php
+
 require 'bd.php';
 session_start();
 $message = '';
@@ -40,4 +41,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo $message;
     }
 }
-?>

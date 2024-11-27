@@ -1,4 +1,5 @@
 <?php
+
 session_start();
 require 'bd.php';
 
@@ -90,11 +91,9 @@ try {
 
     mysqli_commit($conn);
     echo "Compra registrada con éxito.";
-
 } catch (Exception $e) {
     mysqli_rollback($conn);
     echo "Error al registrar la compra: " . $e->getMessage();
 }
 
 mysqli_close($conn);
-?>

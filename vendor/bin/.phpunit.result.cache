@@ -1,0 +1,1 @@
+{"version":1,"defects":{"DatabaseTest::testConnection":4,"DatabaseTest::testProductosTableHasData":4,"DatabaseTest::testInsertAndRetrieveProducto":4,"CarritoTest::testFinalizarCompra":3},"times":{"DatabaseTest::testConnection":0.357,"DatabaseTest::testProductosTableHasData":0.184,"DatabaseTest::testInsertAndRetrieveProducto":0.121,"CarritoTest::testFinalizarCompra":0.245}}

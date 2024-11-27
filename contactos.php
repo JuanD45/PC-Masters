@@ -17,10 +17,10 @@ $loggedIn = isset($_SESSION['idusuario']);
 <header>
         <h1>PC Masters</h1>
         <div class="auth-buttons">
-            <?php if ($loggedIn): ?>
+            <?php if ($loggedIn) : ?>
                 <span>Bienvenido, <?php echo htmlspecialchars($_SESSION['nombre']); ?></span>
                 <a href="logout.php" class="button">Cerrar Sesión</a>
-            <?php else: ?>
+            <?php else : ?>
                 <a href="registrarse.php" class="button">Registrarse</a>
                 <a href="login.php" class="button">Iniciar Sesión</a>
             <?php endif; ?>

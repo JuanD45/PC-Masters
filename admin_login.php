@@ -6,7 +6,7 @@ if (isset($_POST['login'])) {
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-  
+
     $sql = "SELECT * FROM administradores WHERE nombre_usuario = '$username'";
     $result = $conn->query($sql);
 
@@ -45,6 +45,8 @@ if (isset($_POST['login'])) {
         <br>
         <input type="submit" name="login" value="Iniciar Sesión">
     </form>
-    <?php if (isset($error)) { echo "<p>$error</p>"; } ?>
+    <?php if (isset($error)) {
+        echo "<p>$error</p>";
+    } ?>
 </body>
 </html>

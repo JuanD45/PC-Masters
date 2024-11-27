@@ -1,4 +1,5 @@
 <?php
+
 session_start();
 
 if (!isset($_SESSION['idusuario'])) {
@@ -11,4 +12,3 @@ $carrito = json_decode(file_get_contents('php://input'), true);
 $_SESSION['carrito'] = $carrito;
 
 echo json_encode(['success' => true]);
-?>

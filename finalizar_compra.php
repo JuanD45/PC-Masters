@@ -1,4 +1,5 @@
 <?php
+
 session_start();
 require 'bd.php';
 
@@ -47,4 +48,3 @@ try {
 }
 
 mysqli_close($conn);
-?>

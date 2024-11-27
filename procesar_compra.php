@@ -1,4 +1,5 @@
 <?php
+
 session_start();
 require 'bd.php';
 
@@ -39,4 +40,3 @@ if (mysqli_query($conn, $sqlCompra)) {
 } else {
     echo "Error al registrar la compra: " . mysqli_error($conn);
 }
-?>
